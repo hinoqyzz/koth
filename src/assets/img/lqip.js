@@ -1,0 +1,1 @@
+export const lqip = "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABQAwCdASogABIAPxmAtlSsqCSjKAqpkCMJYwAAmbAohYPuCAD+8HR3Jo84a8pecVz1BA5OX/t1cRdOjz2K7eVhHLjPflYHC8/c9HHyDGaY08FEpfh1RU+XHAA=";
