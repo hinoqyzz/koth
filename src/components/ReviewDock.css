@@ -1,0 +1,148 @@
+.dock-tab {
+  position: fixed;
+  top: 46%;
+  right: 0;
+  z-index: 60;
+  width: 28px;
+  height: 132px;
+  border: 1px solid #111;
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  background: #fff;
+  color: #111;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.dock-panel {
+  position: fixed;
+  top: calc(var(--nav-h) + 12px);
+  right: 12px;
+  z-index: 60;
+  width: min(320px, calc(100vw - 24px));
+  max-height: calc(100svh - var(--nav-h) - 24px);
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid #f4f4f2;
+  background: #111;
+  color: #f4f4f2;
+}
+
+.dock-head,
+.dock-toggles,
+.dock-actions,
+.dock-choices {
+  display: flex;
+  gap: 8px;
+}
+
+.dock-head {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dock-kicker,
+.dock-lead,
+.dock-meta,
+.dock-set legend {
+  margin: 0;
+}
+
+.dock-kicker {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b0b0b0;
+}
+
+.dock-close,
+.dock-toggles button,
+.dock-actions button {
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid rgba(244, 244, 242, 0.4);
+  border-radius: var(--radius-control);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dock-lead {
+  margin-top: 10px;
+  color: #d0d0d0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.dock-set {
+  margin: 16px 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.dock-set legend {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b0b0b0;
+}
+
+.dock-choices {
+  flex-direction: column;
+}
+
+.dock-choices label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 6px 8px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dock-choices label.is-selected {
+  border-color: #f4f4f2;
+}
+
+.dock-toggles,
+.dock-actions {
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.dock-toggles button,
+.dock-actions button {
+  width: 100%;
+  text-align: left;
+}
+
+.dock-toggles button[aria-pressed="true"] {
+  background: #f4f4f2;
+  color: #141414;
+}
+
+.dock-meta {
+  margin-top: 14px;
+  color: #b0b0b0;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+@media (max-width: 699px) {
+  .dock-panel {
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    width: auto;
+    max-height: min(68svh, 520px);
+  }
+}

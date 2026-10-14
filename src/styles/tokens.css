@@ -1,0 +1,71 @@
+:root {
+  /* Neutros do wireframe. A paleta oficial fica reservada para a etapa final. */
+  --wf-hero: #121212;
+  --wf-hero-text: #f4f4f2;
+  --wf-muted: #b0b0b0;
+  --wf-line: rgba(255, 255, 255, 0.2);
+  --wf-spoiler: #e6e6e6;
+  --wf-spoiler-text: #161616;
+  --wf-spoiler-muted: #4a4a4a;
+  --wf-inverse: #f4f4f2;
+  --wf-ink: #141414;
+
+  /* Paleta oficial — não aplicar nesta etapa, exceto o arquivo do logo. */
+  --koth-carbon: #111111;
+  --koth-electric: #ff5a1f;
+  --koth-paper: #f5f2eb;
+  --koth-gray: #b8b5af;
+  --koth-text-muted: #66645f;
+
+  --font-display: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 80px;
+  --space-8: 120px;
+
+  --page-margin: 64px;
+  --grid-gap: 24px;
+  --radius-control: 12px;
+  --nav-h: 80px;
+  --spoiler-peek: 104px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-micro: 180ms;
+  --dur-enter: 450ms;
+
+  color-scheme: dark;
+}
+
+@media (max-width: 1099px) {
+  :root {
+    --page-margin: 40px;
+    --grid-gap: 16px;
+  }
+}
+
+@media (max-width: 899px) {
+  :root {
+    --page-margin: 24px;
+    --grid-gap: 16px;
+    --nav-h: 68px;
+    --spoiler-peek: 76px;
+  }
+}
+
+@media (max-height: 820px) and (min-width: 900px) {
+  :root {
+    --spoiler-peek: 80px;
+    --nav-h: 72px;
+  }
+}
+
+@media (max-height: 640px) {
+  :root {
+    --spoiler-peek: 0px;
+  }
+}

@@ -1,0 +1,37 @@
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  padding: calc(var(--nav-h) + 6px) var(--page-margin) 0;
+  pointer-events: none;
+}
+
+.grid-overlay span {
+  background: rgba(128, 128, 128, 0.12);
+  box-shadow:
+    inset 1px 0 0 rgba(255, 255, 255, 0.35),
+    inset -1px 0 0 rgba(0, 0, 0, 0.35);
+  color: #111;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.grid-overlay span::before {
+  content: "";
+}
+
+@media (max-width: 899px) {
+  .grid-overlay {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .grid-overlay span:nth-child(n + 5) {
+    display: none;
+  }
+}

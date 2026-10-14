@@ -1,0 +1,100 @@
+.palco {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: flex;
+  flex-direction: column;
+  background: #0e0e0e;
+  color: #f4f4f2;
+}
+
+.palco-bar,
+.palco-choices {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.palco-bar {
+  justify-content: space-between;
+  padding: 16px 20px 8px;
+}
+
+.palco-kicker {
+  margin: 0;
+  color: #b0b0b0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.palco-bar h2 {
+  margin: 4px 0 0;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.palco-close,
+.palco-choices button {
+  min-height: 40px;
+  padding: 8px 10px;
+  border: 1px solid rgba(244, 244, 242, 0.35);
+  border-radius: var(--radius-control);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.palco-choices {
+  flex-wrap: wrap;
+  padding: 0 20px 12px;
+}
+
+.palco-choices button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.palco-choices button span {
+  color: #b0b0b0;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.palco-choices button[aria-selected="true"] {
+  background: #f4f4f2;
+  color: #141414;
+}
+
+.palco-choices button[aria-selected="true"] span {
+  color: #444;
+}
+
+.palco-stage {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 0;
+  padding: 8px 16px 20px;
+  overflow: auto;
+}
+
+.palco-frame {
+  position: relative;
+  flex: none;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid #3a3a3a;
+}
+
+.palco-frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  transform-origin: top left;
+  background: #121212;
+}

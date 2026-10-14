@@ -1,0 +1,65 @@
+.spoiler {
+  position: relative;
+  min-height: max(46vh, 360px);
+  padding: 18px var(--page-margin) 72px;
+  background: var(--wf-spoiler);
+  color: var(--wf-spoiler-text);
+  scroll-margin-top: var(--nav-h);
+  overflow-x: clip;
+}
+
+.spoiler-kicker {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 10px;
+  color: var(--wf-spoiler-muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.spoiler-title {
+  margin: 0;
+  max-width: 100%;
+  font-size: clamp(72px, 7.4vw, 128px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+.spoiler-note {
+  max-width: 36ch;
+  margin: 28px 0 0;
+  color: var(--wf-spoiler-muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (max-width: 899px) {
+  .spoiler {
+    min-height: 42vh;
+    padding-top: 12px;
+  }
+
+  .spoiler-kicker {
+    margin-bottom: 6px;
+  }
+
+  .spoiler-title {
+    font-size: clamp(40px, 12vw, 64px);
+    line-height: 0.9;
+  }
+
+  .spoiler-kicker span:last-child {
+    display: none;
+  }
+}
+
+@media (max-height: 640px) {
+  .spoiler {
+    min-height: 0;
+  }
+}
